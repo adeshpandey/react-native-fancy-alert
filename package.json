@@ -1,0 +1,31 @@
+{
+  "name": "react-native-fancy-alert",
+  "version": "1.0.0",
+  "description": "A modal based facny alert in react native. which opens similar to native alerts",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "files": [
+    "/lib"
+  ],
+  "author": "Adesh Pandey",
+  "license": "Apache License 2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adeshpandey/react-native-fancy-alert.git"
+  },
+  "homepage": "https://github.com/adeshpandey/react-native-fancy-alert#readme",
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "scripts": {
+    "build": "rm -rf ./lib && tsc"
+  },
+  "dependencies": {
+    "@types/react": "^18.0.26",
+    "@types/react-native": "^0.71.0"
+  }
+}
