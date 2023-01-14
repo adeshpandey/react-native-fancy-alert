@@ -3,7 +3,7 @@ import { StyleProp, TextProps, TextStyle, ViewStyle } from "react-native";
 
 export type AlertOptions = {
   title: string | ReactElement;
-  subtitle?: string;
+  subtitle?: string | ReactElement;
   buttons?: RNAlertButtonProps[];
   onShow?: () => void;
   onHide?: () => void;
