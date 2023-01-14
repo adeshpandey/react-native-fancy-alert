@@ -1,6 +1,6 @@
 {
   "name": "react-native-fancy-alert",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A modal based fancy alert in react native. which opens similar to native alerts",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -13,6 +13,12 @@
     "type": "git",
     "url": "git+https://github.com/adeshpandey/react-native-fancy-alert.git"
   },
+  "keywords": [
+    "react-native-fancy-alert",
+    "react-native expo alert",
+    "react native alert typescript",
+    "react native advanced alert"
+  ],
   "homepage": "https://github.com/adeshpandey/react-native-fancy-alert#readme",
   "devDependencies": {
     "typescript": "^4.9.4"
