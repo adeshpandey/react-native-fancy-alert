@@ -1,7 +1,7 @@
 {
   "name": "react-native-fancy-alert",
   "version": "0.0.1",
-  "description": "A modal based facny alert in react native. which opens similar to native alerts",
+  "description": "A modal based fancy alert in react native. which opens similar to native alerts",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "files": [
