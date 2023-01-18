@@ -12,7 +12,7 @@ The `RNFancyAlert` API consists of:
 To open an Alert, call the `alert()` method and pass the `options` that suit your needs. title is required but other options are optional
 
 ```js
-import Toast from 'react-native-toast-message'
+import RnFancyAlert from 'react-native-fancy-alert'
 
 RNFancyAlert.alert({
   title: 'Hello Alert',

@@ -51,7 +51,7 @@ export function Foo(props) {
 
   return (
     <Button
-      title='Show toast'
+      title='Show alert'
       onPress={showAlert}
     />
   )
