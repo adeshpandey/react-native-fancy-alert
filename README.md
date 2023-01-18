@@ -5,6 +5,9 @@
 
 Simple yet customizable alert for React Native Apps.
 
+![RNAlert gif](./docs/alert.gif)
+
+
 ## Features
 
 - 🚀 Imperative API
