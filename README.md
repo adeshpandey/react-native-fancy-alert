@@ -1,68 +1,28 @@
 # react-native-fancy-alert
 
-### How to use
+[![npm version](https://img.shields.io/npm/v/react-native-fancy-alert)](https://www.npmjs.com/package/react-native-fancy-alert)
+[![npm downloads](https://img.shields.io/npm/dw/react-native-fancy-alert)](https://www.npmjs.com/package/react-native-fancy-alert)
 
-Add Following in your App.jsx/App.tsx
+Simple yet customizable alert for React Native Apps.
 
-```
-import RNFancyAlert from 'react-native-fancy-alert';
-<RNFancyAlert />
-```
-then call something like below whenever you need to call the fancy alert.
+## Features
 
-```
-RNFancyAlert.alert({
-    title: "any string or react element", 
-    subtitle: "any string or react element",
-    buttons: [{title: "Okay"},{"role":"cancel", "title":"Cancel"}]})
+- 🚀 Imperative API
+- 📦 Very lightweight (~25 kB)
+- 🎨 Highly Customizable
+- 🔧 No extra configs
 
-```
+## Documentation
 
-Demo App Example
-```
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { Alert, StyleSheet, TouchableOpacity, View, Text } from 'react-native';
-import RNFancyAlert from 'react-native-fancy-alert';
 
-export default function App() {
+- [Quick start](./docs/quick-start.md)
+- [API](./docs/api.md)
+- [Using custom Components](./docs/custom-components.md)
+- FAQ
+  - [How to show the Toast inside a Modal?](./docs/modal-usage.md)
+  - [How to render the Toast when using a Navigation library?](./docs/navigation-usage.md)
+  - [How to mock the library for testing with jest?](./docs/jest-testing.md)
 
-  const showAlert = () => {
+## License
 
-    const randint = Math.floor(Math.random() * 3); 
-    RNFancyAlert.alert({
-      title: <Text h1 style={{color:"tomato"}}>Hey its a fancy Alert</Text>,
-      subtitle: "Its sub title",
-      buttons: [
-        {
-          title: <Text h3>Hi</Text>,
-          onPress: () => Alert.alert("You clicked!"),
-          role: "cancel",
-          type: "success",
-          titleStyle: { color: "tomato" },
-        },
-        { title: "Bye" },
-      ],
-    });
-  }  
-
-  return (
-    <View style={styles.container}>
-      <TouchableOpacity onPress={showAlert}>
-        <Text>ShowAlert</Text>
-      </TouchableOpacity>
-      <StatusBar style="auto" />
-      <RNFancyAlert />
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
-```
+Apache 2.0
