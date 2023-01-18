@@ -20,10 +20,7 @@ export default function RNAlertButton({title, containerStyle, buttonStyle, title
               React.createElement(
                 React.Fragment,
                 { key: index },
-                renderElement(
-                  child,
-                  Object.assign({ style: Object.assign({}, titleStyle) })
-                )
+                renderElement(child, Object.assign({}, titleStyle))
               )
             )}
           </View>

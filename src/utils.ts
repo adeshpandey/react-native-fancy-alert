@@ -9,7 +9,7 @@ export const renderElement = (content: any, style: StyleProp<TextStyle>) => {
     return typeof content == "string"
         ? React.createElement(
             Text,
-            { style: Object.assign({}, style) },
+            { style },
             content
           )
         : content;
