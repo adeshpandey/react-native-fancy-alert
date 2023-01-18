@@ -1,5 +1,5 @@
 import React from "react";
-import { Modal, Platform, Pressable, StyleSheet, View } from "react-native";
+import { Dimensions, Modal, Platform, Pressable, StyleSheet, View } from "react-native";
 import RNAlertButton from "./components/RNAlertButton";
 import RNAlertButtons from "./components/RNAlertButtons";
 import { RNAlertSubtitle } from "./components/RNAlertSubtitle";
@@ -78,9 +78,6 @@ const styles = StyleSheet.create({
     fontWeight: "600",
   },
   backdrop: {
-    position: "absolute",
-    top: 0,
-    left: 0,
     width: "100%",
     height: "100%",
     justifyContent: "center",
@@ -92,16 +89,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  fullscreen: {
-    width: "100%",
-    height: "100%",
-  },
   overlay: Object.assign(
     {
+      width: Dimensions.get("screen").width * 0.8,
       backgroundColor: "white",
       borderRadius: 3,
-      width: "75%",
-      padding: 20,
+      padding: 10,
     },
     Platform.select({
       android: {
