@@ -24,8 +24,8 @@ export const RNAlertTitle = ({ title, titleStyle }: RNAlertTitleProps) => {
 const styles = StyleSheet.create({
   title: {
     fontSize: 14,
-    fontWeight: Platform.OS === "ios" ? "400" : "500",
-    marginBottom: 10,
+    fontWeight: Platform.OS === "ios" ? "500" : "600",
+    marginBottom: 15,
   },
 });
 RNAlertTitle.displayName = "RNAlert.Title";
