@@ -35,6 +35,9 @@ export function useAlert() {
         buttons = initialOptions.buttons,
         title = initialOptions.title,
         subtitle = initialOptions.subtitle,
+        backDropStyle,
+        containerStyle,
+        overlayStyle
       } = params;
 
       const defaultBtn: RNAlertButtonProps = {
@@ -57,6 +60,9 @@ export function useAlert() {
         onShow,
         onHide,
         onPress,
+        backDropStyle,
+        containerStyle,
+        overlayStyle
       });
       setIsVisible(true);
       if(onShow)

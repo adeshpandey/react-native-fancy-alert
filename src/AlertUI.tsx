@@ -17,12 +17,12 @@ export default function AlertUI({
   hide: Function;
   show: Function;
 }) {
-  const { buttons, title, subtitle, onPress } = options;
+  const { buttons, title, subtitle, backDropStyle, containerStyle, overlayStyle } = options;
   return (
-    <Modal visible={isVisible}>
-      <Pressable style={styles.backdrop}>
-        <View style={styles.container}>
-          <View style={styles.overlay}>
+    <Modal visible={isVisible} transparent>
+      <Pressable style={StyleSheet.flatten([styles.backdrop, backDropStyle])}>
+        <View style={StyleSheet.flatten([styles.container, containerStyle])}>
+          <View style={StyleSheet.flatten([styles.overlay, overlayStyle])}>
             <RNAlertTitle title={title} />
             {subtitle && <RNAlertSubtitle title={subtitle} />}
             <RNAlertButtons>

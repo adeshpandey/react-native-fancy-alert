@@ -8,6 +8,9 @@ export type AlertOptions = {
   onShow?: () => void;
   onHide?: () => void;
   onPress?: () => void;
+  backDropStyle?: StyleProp<ViewStyle>;
+  containerStyle?: StyleProp<ViewStyle>;
+  overlayStyle?: StyleProp<ViewStyle>;
 };
 
 export type RNAlertTitleProps = PropsWithChildren & {
