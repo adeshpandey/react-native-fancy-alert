@@ -30,6 +30,7 @@
     "react-native": "*"
   },
   "scripts": {
-    "build": "rm -rf ./lib && tsc"
+    "build": "rm -rf ./lib && tsc",
+    "test": "jest --passWithNoTests"
   }
 }
