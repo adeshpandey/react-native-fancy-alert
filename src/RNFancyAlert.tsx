@@ -1,9 +1,9 @@
 import React from "react";
 import AlertUI from "./AlertUI";
-import { AlertOptions, AlertRefObj, RNFancyAlertRefProps } from "./types";
+import { AlertOptions, AlertRefObj, RNAlertProps, RNFancyAlertRefProps } from "./types";
 import { useAlert } from "./useAlert";
 
-const AlertRoot = React.forwardRef((props, ref) => {
+const AlertRoot = React.forwardRef((props: RNAlertProps, ref) => {
   const { show, hide, isVisible, options } = useAlert();
   // This must use useCallback to ensure the ref doesn't get set to null and then a new ref every render.
   React.useImperativeHandle(
@@ -47,7 +47,7 @@ function addNewRef(newRef: RNFancyAlertRefProps) {
 function removeOldRef(oldRef: RNFancyAlertRefProps | null) {
   refs = refs.filter((r) => r.current !== oldRef);
 }
-export function RNFancyAlert() {
+export function RNFancyAlert(props: RNAlertProps) {
   const alertRef = React.useRef<RNFancyAlertRefProps | null>(null);
   /*
       This must use `useCallback` to ensure the ref doesn't get set to null and then a new ref every render.
@@ -65,7 +65,7 @@ export function RNFancyAlert() {
       removeOldRef(alertRef.current);
     }
   }, []);
-  return <AlertRoot ref={setRef} />;
+  return <AlertRoot ref={setRef} {...props} />;
 }
 
 export function getRef() {

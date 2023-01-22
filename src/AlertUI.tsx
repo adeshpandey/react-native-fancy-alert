@@ -1,5 +1,5 @@
 import React from "react";
-import { Dimensions, Modal, Platform, Pressable, StyleSheet, View } from "react-native";
+import { Dimensions, Modal, Platform, Pressable, StyleProp, StyleSheet, TextStyle, View } from "react-native";
 import RNAlertButton from "./components/RNAlertButton";
 import RNAlertButtons from "./components/RNAlertButtons";
 import { RNAlertSubtitle } from "./components/RNAlertSubtitle";
@@ -11,20 +11,33 @@ export default function AlertUI({
   options,
   hide,
   show,
+  titleStyle,
+  subtitleStyle
 }: {
   isVisible: boolean;
   options: AlertOptions;
   hide: Function;
   show: Function;
+  titleStyle?: StyleProp<TextStyle>;
+  subtitleStyle?: StyleProp<TextStyle>;
 }) {
-  const { buttons, title, subtitle, backDropStyle, containerStyle, overlayStyle } = options;
+  const {
+    buttons,
+    title,
+    subtitle,
+    backDropStyle,
+    containerStyle,
+    overlayStyle,
+  } = options;
   return (
     <Modal visible={isVisible} transparent>
       <Pressable style={StyleSheet.flatten([styles.backdrop, backDropStyle])}>
         <View style={StyleSheet.flatten([styles.container, containerStyle])}>
           <View style={StyleSheet.flatten([styles.overlay, overlayStyle])}>
-            <RNAlertTitle title={title} />
-            {subtitle && <RNAlertSubtitle title={subtitle} />}
+            <RNAlertTitle title={title} titleStyle={titleStyle} />
+            {subtitle && (
+              <RNAlertSubtitle title={subtitle} titleStyle={subtitleStyle} />
+            )}
             <RNAlertButtons>
               {buttons?.map((btn, i) =>
                 React.createElement(

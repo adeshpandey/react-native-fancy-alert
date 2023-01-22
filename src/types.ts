@@ -42,3 +42,8 @@ export type RNAlertButtonProps = PropsWithChildren & {
   type?: "success" | "warning" | "error" | "default";
   role?: "cancel";
 };
+
+export type RNAlertProps = {
+  titleStyle?: StyleProp<TextStyle>;
+  subtitleStyle?: StyleProp<TextStyle>;
+};

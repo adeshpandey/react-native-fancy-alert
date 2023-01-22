@@ -1,15 +1,15 @@
 import React from "react";
-import { StyleProp, Text, TextStyle } from "react-native";
+import { Text, TextProps } from "react-native";
 
 export const noop = () => undefined;
 
-export const renderElement = (content: any, style: StyleProp<TextStyle>) => {
+export const renderElement = (content: any, props: TextProps) => {
   {
 
     return typeof content == "string"
         ? React.createElement(
             Text,
-            { style },
+            props,
             content
           )
         : content;
