@@ -19,7 +19,7 @@
     "react native alert typescript",
     "react native advanced alert"
   ],
-  "homepage": "https://github.com/adeshpandey/react-native-fancy-alert#readme",
+  "homepage": "https://adeshpandey.github.io/react-native-fancy-alert/",
   "devDependencies": {
     "typescript": "^4.9.4"
   },
