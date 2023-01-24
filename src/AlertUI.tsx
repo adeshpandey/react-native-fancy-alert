@@ -1,25 +1,21 @@
 import React from "react";
-import { Dimensions, Modal, Platform, Pressable, StyleProp, StyleSheet, TextStyle, View } from "react-native";
+import { Dimensions, Modal, Platform, Pressable, StyleProp, StyleSheet, TextStyle, View, ViewStyle } from "react-native";
 import RNAlertButton from "./components/RNAlertButton";
 import RNAlertButtons from "./components/RNAlertButtons";
 import { RNAlertSubtitle } from "./components/RNAlertSubtitle";
 import { RNAlertTitle } from "./components/RNAlertTitle";
 import { AlertOptions } from "./types";
 
-export default function AlertUI({
-  isVisible,
-  options,
-  hide,
-  show,
-  titleStyle,
-  subtitleStyle
-}: {
+export default function AlertUI(props: {
   isVisible: boolean;
   options: AlertOptions;
   hide: Function;
   show: Function;
   titleStyle?: StyleProp<TextStyle>;
   subtitleStyle?: StyleProp<TextStyle>;
+  backDropStyle?: StyleProp<ViewStyle>;
+  containerStyle?: StyleProp<ViewStyle>;
+  overlayStyle?: StyleProp<ViewStyle>;
 }) {
   const {
     buttons,
@@ -28,15 +24,15 @@ export default function AlertUI({
     backDropStyle,
     containerStyle,
     overlayStyle,
-  } = options;
+  } = props.options;
   return (
-    <Modal visible={isVisible} transparent>
-      <Pressable style={StyleSheet.flatten([styles.backdrop, backDropStyle])}>
-        <View style={StyleSheet.flatten([styles.container, containerStyle])}>
-          <View style={StyleSheet.flatten([styles.overlay, overlayStyle])}>
-            <RNAlertTitle title={title} titleStyle={titleStyle} />
+    <Modal visible={props.isVisible} transparent>
+      <Pressable style={Object.assign({},styles.backdrop, backDropStyle, props.backDropStyle)}>
+        <View style={Object.assign({},styles.container, containerStyle)}>
+          <View style={Object.assign({},styles.overlay, overlayStyle)}>
+            <RNAlertTitle title={title} titleStyle={props.titleStyle} />
             {subtitle && (
-              <RNAlertSubtitle title={subtitle} titleStyle={subtitleStyle} />
+              <RNAlertSubtitle title={subtitle} titleStyle={props.subtitleStyle} />
             )}
             <RNAlertButtons>
               {buttons?.map((btn, i) =>
@@ -59,7 +55,7 @@ export default function AlertUI({
                       title: btn.title,
                       onPress: () => {
                         if (btn.onPress) btn.onPress();
-                        hide();
+                        props.hide();
                       },
                     }
                   )
