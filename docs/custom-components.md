@@ -79,6 +79,18 @@ Since I made this package out of a use case and I'm using this for my purpose as
 
 So `RNFancyAlert` component can be initialized as follows:
 
-```js
-<RNFancyAlert titleStyle={{color:'tomato'}} subtitleStyle={{fontSize:14, fontWeight:'300'}} />
+```
+
+<RNFancyAlert titleStyle={styles.titleStyle} subtitleStyle={styles.subTitle} />
+
+const styles= StyleSheet.create({
+  titleStyle:{
+    color:'tomato'
+  },
+  subtitleStyle:{
+    fontSize:14,
+    fontWeight: '300'
+  }
+})
+
 ```
