@@ -70,3 +70,15 @@ RNFancyAlert.alert({
 ```
 
 Since this `RNFancyAlert` was introduced to give developer more power to have fancy alerts for themselves so you can customize the buttons as well. For more details you can se[`RNAlertButton` options](./api.md#RNAlertButton). 
+
+### Update 0.0.15
+Since I made this package out of a use case and I'm using this for my purpose as well so while using it I realized that if I could apply custom styles while initializing then my alert syntax will become more cleaner and generic so I've introduced two extra props in RNFancyAlert and they are as follows:
+
+`titleStyle` -> any textStyle can be passed
+`subtitleStyle` -> any textStyle can be passed
+
+So `RNFancyAlert` component can be initialized as follows:
+
+```
+<RNFancyAlert titleStyle={{color:'tomato'}} subtitleStyle={{fontSize:14, fontWeight:'300'}} />
+```
