@@ -81,7 +81,7 @@ So `RNFancyAlert` component can be initialized as follows:
 
 ```
 
-<RNFancyAlert titleStyle={styles.titleStyle} subtitleStyle={styles.subTitle} />
+<RNFancyAlert titleStyle={styles.titleStyle} subtitleStyle={styles.subtitleStyle} />
 
 const styles= StyleSheet.create({
   titleStyle:{
