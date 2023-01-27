@@ -3,7 +3,7 @@
 [![npm version](https://img.shields.io/npm/v/react-native-fancy-alert)](https://www.npmjs.com/package/react-native-fancy-alert)
 [![npm downloads](https://img.shields.io/npm/dw/react-native-fancy-alert)](https://www.npmjs.com/package/react-native-fancy-alert)
 
-Simple yet customizable alert for React Native Apps.
+Simple yet customizable alert for React Native Apps compatible with expo.
 
 ![RNAlert gif](./docs/alert.gif)
 
